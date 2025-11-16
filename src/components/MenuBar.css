@@ -1,0 +1,36 @@
+.menubar {
+  background-color: #333;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.menu-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.menu-item a:hover {
+  background-color: #555;
+  color: #61dafb;
+}
+
+@media (max-width: 768px) {
+  .menu-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
