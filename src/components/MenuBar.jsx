@@ -1,8 +1,9 @@
 import './MenuBar.css';
 
-function MenuBar() {
+function MenuBar({ user, onLogout }) {
   return (
     <nav className="menubar">
+      <div className="menu-brand">🐾 Veterinaria</div>
       <ul className="menu-list">
         <li className="menu-item">
           <a href="#inicio">Inicio</a>
@@ -19,6 +20,12 @@ function MenuBar() {
         <li className="menu-item">
           <a href="#acerca">Acerca de</a>
         </li>
+        {user && (
+          <li className="menu-item menu-user">
+            <span>{user.username}</span>
+            <button onClick={onLogout} className="logout-btn">Cerrar Sesión</button>
+          </li>
+        )}
       </ul>
     </nav>
   );
